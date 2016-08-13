@@ -17,70 +17,44 @@
   <div class="container">
     <div class="services-alfa-div">
       <h2>Nos services</h2>
-      <div class="sevice-prevention service">
-        <div class="service_service">
-          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/formation.png" alt="logo du service formation"></a>
-          <div class="service-info">
-            <h3>Service de prévention</h3>
-            <div class="service-paragraphe">
-              <p>
-                Inspirée du modèle thérapeutique, l’intervention préventive s’articule sur les approches psychosociale et systémique. Toute demande d’aide est analysée avec le demandeur afin d’adapter notre intervention à chaque situation.
-              </p>
+      <!-- Récupération des différents services -->
+      <?php
+      $args = array(
+          'type'                     => 'post',
+          'child_of'                 => 0,
+          'parent'                   => '',
+          'orderby'                  => 'ID',
+          'order'                    => 'ASC',
+          'hide_empty'               => 0,
+          'hierarchical'             => 1,
+          'exclude'                  => '',
+          'include'                  => '',
+          'number'                   => '',
+          'taxonomy'                 => 'category',
+          'pad_counts'               => false
+
+      );
+      $categories = get_categories( $args );
+      foreach ($categories as $category) : ?>
+        <?php if($category->parent == '9'): ?>
+          <div class="sevice-prevention service">
+            <div class="service_service">
+              <a href="<?php bloginfo('wpurl'); ?>/category/services/<?php echo $category->slug; ?>"><img src="<?php bloginfo('template_directory'); ?>/img/formation.png" alt="logo du service formation"></a>
+              <div class="service-info">
+                <h3><?php echo $category->name ?></h3>
+                <div class="service-paragraphe">
+                  <p>
+                    <?php echo $category->description; ?>
+                  </p>
+                </div>
+                <p>
+                  <a class="see-more" href="<?php bloginfo('wpurl'); ?>/category/services/<?php echo $category->slug; ?>">En savoir plus</a>
+                </p>
+              </div>
             </div>
-            <p>
-              <a class="see-more" href="#">En savoir plus</a>
-            </p>
           </div>
-        </div>
-      </div>
-      <div class="sevice-therapeutique service">
-        <div class="service_service">
-          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/therapeutique.png" alt="logo du service thérapeutique"></a>
-          <div class="service-info">
-            <h3>Service thérapeutique</h3>
-            <div class="service-paragraphe">
-              <p>
-                Il est composé d'une équipe pluridisciplinaire (assistants sociaux, médecins, psychologues et psychiatre).
-              </p>
-            </div>
-            <p>
-              <a class="see-more" href="#">En savoir plus</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="sevice-parentalite service">
-        <div class="service_service">
-          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/parent.png" alt="logo du service parentalite"></a>
-          <div class="service-info">
-            <h3>Service parentalité</h3>
-            <div class="service-paragraphe">
-              <p>
-                Le Service « Parentalité » est assuré par une équipe pluridisciplinaire spécifique. L’objectif de ce service est de favoriser des relations familiales harmonieuses et un développement psycho-médico-social optimum de l'enfant par un accompagnement personnalisé, de proximité et en réseau, de parents et futurs parents toxicodépendants et/ou souffrant de problèmes de santé mentale et de leurs enfants de 0 à 18 ans, placés ou vivant en famille.
-              </p>
-            </div>
-            <p>
-              <a class="see-more" href="#">En savoir plus</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="sevice-risques service">
-        <div class="service_service">
-          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/risque.png" alt="logo du service réduction des risques"></a>
-          <div class="service-info">
-            <h3>Service réduction des risques</h3>
-            <div class="service-paragraphe">
-              <p>
-                La réduction des risques est une stratégie de santé publique qui vise à prévenir les dommages que l’usage de drogues peut occasionner tant pour la société que pour les personnes qui ne peuvent ou ne veulent pas s’abstenir d’en consommer.
-              </p>
-            </div>
-            <p>
-              <a class="see-more" href="#">En savoir plus</a>
-            </p>
-          </div>
-        </div>
-      </div>
+        <?php endif; ?>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
@@ -88,6 +62,7 @@
   <div class="container">
     <div class="news-alfa-div">
       <h2>Les dernières news</h2>
+      <!-- Récupération des différentes news (maximum 3) -->
       <div class="news">
         <ul>
           <?php $query = new WP_query( array( 'post_type' => 'news', 'order' => 'ASC', 'posts_per_page' => 3 ) );
