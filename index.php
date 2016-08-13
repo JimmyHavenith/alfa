@@ -3,13 +3,11 @@
   <div class="container">
     <div class="about-alfa-div">
       <!-- Contenu à-propos page d'accueil -->
-      <?php
-      $query = new WP_query( 'name=a-propos' );
-      while ( $query->have_posts() ):
-      ?>
-      <?php $query->the_post(); ?>
-      <h2><?php echo get_the_title(); ?></h2>
-      <p><?php echo get_the_content(); ?></p>
+      <?php $query = new WP_query( 'name=a-propos' );
+      while ( $query->have_posts() ): ?>
+        <?php $query->the_post(); ?>
+        <h2><?php echo get_the_title(); ?></h2>
+        <p><?php echo get_the_content(); ?></p>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?>
     </div>
