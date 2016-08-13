@@ -1,0 +1,80 @@
+header{
+  display: block;
+  .header-menu{
+    background-color: $color-black;
+    display: block;
+    padding: 15px 0px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+    .main-menu{
+      display: inline-block;
+      width: 60%;
+      padding-bottom: 6px;
+      ul{
+        li{
+          float: left;
+          margin-right: 18px;
+          a{
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .search-bar{
+      display: inline-block;
+      width: 39%;
+      .search-bar-div{
+        width: 100%;
+      }
+      form{
+        float: right;
+        input[type="text"]{
+          border: medium none;
+          padding: 5px;
+          background-color: white;
+        }
+        input[type="submit"]{
+          padding: 4px;
+          border: none;
+          color: white;
+          background-color: $color-blue;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .header-alfa{
+    margin-top: 58px;
+    background-color: $color-blue;
+    .header-alfa-div {
+      display: block;
+      margin: auto;
+      width: 17%;
+      padding: 15px 0px;
+      h1 {
+        color: white;
+        float: right;
+        font-size: 19px;
+        font-weight: bold;
+        margin-top: 15px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .header-banner{
+    position: relative;
+    img{
+      width: 100%;
+    }
+    .header-banner-txt{
+      bottom: 210px;
+      color: white;
+      font-size: 30px;
+      position: absolute;
+      right: 207px;
+    }
+  }
+}
