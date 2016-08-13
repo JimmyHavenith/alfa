@@ -60,7 +60,7 @@ header .header-menu {
   background-color: #212121;
   display: block;
   padding: 15px 0px;
-  position: fixed;
+  position: static;
   width: 100%;
   top: 0;
   z-index: 5;

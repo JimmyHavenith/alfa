@@ -17,16 +17,9 @@
       <div class="header-menu">
         <div class="container">
           <nav class="main-menu">
-            <ul>
-              <li><a href="#">Accueil</a></li>
-              <li><a href="#">A propos</a></li>
-              <li><a href="#">Nos services</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Tarifs</a></li>
-              <li><a href="#">Partenariat</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+            <?php wp_nav_menu(array(
+              'theme_location:' => 'nav'
+            )); ?>
           </nav>
           <div class="search-bar">
             <div class="search-bar-div">
