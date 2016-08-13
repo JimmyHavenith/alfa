@@ -39,12 +39,14 @@
           </div>
         </div>
       </div>
-      <div class="header-banner">
-        <img src="<?php bloginfo('template_directory'); ?>/img/banner02.png" alt="Photo de page d'accueil du centre alfa">
-        <div class="header-banner-txt">
-          <p>
-            Aide Liégoise aux Alcooliques et à leur Famille - 04 223 09 03
-          </p>
+      <?php if(is_home()): ?>
+        <div class="header-banner">
+          <img src="<?php bloginfo('template_directory'); ?>/img/banner02.png" alt="Photo de page d'accueil du centre alfa">
+          <div class="header-banner-txt">
+            <p>
+              Aide Liégoise aux Alcooliques et à leur Famille - 04 223 09 03
+            </p>
+          </div>
         </div>
-      </div>
+      <?php endif; ?>
     </header>

@@ -65,7 +65,7 @@
       <!-- Récupération des différentes news (maximum 3) -->
       <div class="news">
         <ul>
-          <?php $query = new WP_query( array( 'post_type' => 'news', 'order' => 'ASC', 'posts_per_page' => 3 ) );
+          <?php $query = new WP_query( array( 'post_type' => 'news', 'order' => 'DESC', 'posts_per_page' => 3 ) );
   						if(have_posts()): while ( $query -> have_posts() ): $query -> the_post(); global $post; ?>
                 <li>
                   <h3><?php echo get_the_title(); ?></h3>
@@ -75,7 +75,7 @@
                 </li>
               <?php endwhile; endif; ?>
         </ul>
-        <a href="#">Afficher toutes les news</a>
+        <a href="<?php bloginfo('wpurl'); ?>/category/services/category/news">Afficher toutes les news</a>
       </div>
     </div>
   </div>
