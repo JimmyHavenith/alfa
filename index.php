@@ -2,15 +2,16 @@
 <section class="about-alfa">
   <div class="container">
     <div class="about-alfa-div">
-      <h2>Qui sommes nous ?</h2>
-      <p>
-        Le Centre Alfa est un Service de Santé Mentale spécialisé dans le traitement, la prévention et la réduction des risques en matière d'assuétudes.
-        Il est agréé et subsidié par la Wallonie. Il est aussi agréé comme Service d'Education Permanente par la Fédération Wallonie-Bruxelles.
-        Créée en 1962, l'asbl ALFA (Aide Liégeoise aux Alcooliques et à leur Famille),  est devenue, depuis 1975, un Service de Santé Mentale qui s'est spécialisé dans le traitement, la prévention et la réduction des risques en matière d'assuétudes. En effet, s'il peut répondre à
-      </p>
-      <p>
-        <a href="#">En savoir plus</a>
-      </p>
+      <!-- Contenu à-propos page d'accueil -->
+      <?php
+      $query = new WP_query( 'name=a-propos' );
+      while ( $query->have_posts() ):
+      ?>
+      <?php $query->the_post(); ?>
+      <h2><?php echo get_the_title(); ?></h2>
+      <p><?php echo get_the_content(); ?></p>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
     </div>
   </div>
 </section>
@@ -91,24 +92,15 @@
       <h2>Les dernières news</h2>
       <div class="news">
         <ul>
-          <li>
-            <h3>TabAlfa</h3>
-            <p>
-              Les séances du prochain groupe TabAlfa auront lieu de 15h30 à 17h, les mardis 20/09, 27/09, 4/10, 11/10, 18/10 et 25/10.
-            </p>
-          </li>
-          <li>
-            <h3>Post-TabAlfa</h3>
-            <p>
-                Prochaines dates : 23 août, 4 octobre, 15 novembre, 20 décembre 2016 de 17 h à 18 h.
-            </p>
-          </li>
-          <li>
-            <h3>Groupe «Parentalité et Dépendances»</h3>
-            <p>
-              Le groupe d’intervisions mensuel «Parentalité et Dépendances» à destinations des professionnels concernés par cette thématique reprendra ses activités le lundi 19 septembre 2016 de 10 h à 12 h.
-            </p>
-          </li>
+          <?php $query = new WP_query( array( 'post_type' => 'news', 'order' => 'ASC', 'posts_per_page' => 3 ) );
+  						if(have_posts()): while ( $query -> have_posts() ): $query -> the_post(); global $post; ?>
+                <li>
+                  <h3><?php echo get_the_title(); ?></h3>
+                  <p>
+                    <?php echo get_field('news_content'); ?>
+                  </p>
+                </li>
+              <?php endwhile; endif; ?>
         </ul>
         <a href="#">Afficher toutes les news</a>
       </div>
