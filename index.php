@@ -29,6 +29,7 @@
               <?php $test = get_field('taxonomy_image', $tax_term); ?>
               <a href="<?= esc_attr(get_term_link($tax_term, $taxonomy)); ?>"><img src="<?= $test['url']; ?>" alt="<?= $test['alt']; ?>"/></a>
               <div class="service-info">
+                <h3><?= $tax_term->name ; ?></h3>
                 <div class="service-paragraphe">
                   <p>
                     <?= wpautop( $tax_term->description ); ?>
