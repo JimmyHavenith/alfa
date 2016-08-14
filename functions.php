@@ -124,3 +124,24 @@ register_post_type( 'faqs',
     'menu_position' => 4
   )
 );
+
+register_post_type( 'contact',
+    array(
+        'labels' => array(
+            'name' => __( 'contact' ),
+            'singular_name' => __( 'contact' ),
+            'add_new' => __('Nouveau lieu'),
+            'add_new_item' => __('Ajouter un nouveau lieu'),
+            'menu_name' => __('Contact'),
+            'all_items' => __('Tous les lieux'),
+            'name_admin_bar' => __('Contact'),
+            'view_item' => __('Voir le lieu'),
+            'edit_item' => __('Modifier le lieu')
+
+        ),
+    'public' => true,
+    'has_archive' => true,
+    'supports' => array('thumbnail', 'title'),
+    'menu_position' => 4
+  )
+);
