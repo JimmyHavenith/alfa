@@ -145,3 +145,68 @@ register_post_type( 'contact',
     'menu_position' => 4
   )
 );
+
+register_post_type( 'documents',
+    array(
+        'labels' => array(
+            'name' => __( 'documents' ),
+            'singular_name' => __( 'document' ),
+            'add_new' => __('Nouveau document'),
+            'add_new_item' => __('Ajouter un nouveau document'),
+            'menu_name' => __('Documents'),
+            'all_items' => __('Tous les documents'),
+            'name_admin_bar' => __('Documents'),
+            'view_item' => __('Voir le document'),
+            'edit_item' => __('Modifier le document')
+
+        ),
+    'public' => true,
+    'has_archive' => true,
+    'supports' => array('thumbnail', 'title'),
+    'menu_position' => 4
+  )
+);
+
+register_post_type( 'services',
+    array(
+        'labels' => array(
+            'name' => __( 'services' ),
+            'singular_name' => __( 'service' ),
+            'add_new' => __('Nouveau service'),
+            'add_new_item' => __('Ajouter un nouveau service'),
+            'menu_name' => __('Services'),
+            'all_items' => __('Tous les services'),
+            'name_admin_bar' => __('Services'),
+            'view_item' => __('Voir le service'),
+            'edit_item' => __('Modifier le service')
+
+        ),
+    'public' => true,
+    'has_archive' => true,
+    'supports' => array('thumbnail', 'title'),
+    'menu_position' => 4
+  )
+);
+
+register_taxonomy(
+	'sous-services',
+	'services',
+	array(
+			'hierarchical' => true,
+			'labels' => array(
+			'name' => __( 'Sous-services', 'bakery' ),
+			'singular_name' => __( 'Sous-services', 'nom du theme' ),
+			'search_items' =>  __( 'Rechercher un sous-service', 'nom du theme' ),
+			'all_items' => __( 'Tous les sous-services', 'nom du theme' ),
+			'parent_item' => __( 'Sous-service parent', 'nom du theme' ),
+			'parent_item_colon' => __( 'Sous-service parent :', 'nom du theme' ),
+			'edit_item' => __( 'Éditer un sous-service', 'nom du theme' ),
+			'update_item' => __( 'Sauvegarder un sous-service', 'nom du theme' ),
+			'add_new_item' => __( 'Ajouter un sous-service', 'nom du theme' ),
+			'new_item_name' => __( 'Nouveau sous-service', 'nom du theme' )
+		),
+		'show_admin_column' => true,
+		'show_ui' => true,
+		'query_var' => true,
+	)
+);

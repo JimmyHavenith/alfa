@@ -17,43 +17,29 @@
   <div class="container">
     <div class="services-alfa-div">
       <h2>Nos services</h2>
-      <!-- Récupération des différents services -->
       <?php
-      $args = array(
-          'type'                     => 'post',
-          'child_of'                 => 0,
-          'parent'                   => '',
-          'orderby'                  => 'ID',
-          'order'                    => 'ASC',
-          'hide_empty'               => 0,
-          'hierarchical'             => 1,
-          'exclude'                  => '',
-          'include'                  => '',
-          'number'                   => '',
-          'taxonomy'                 => 'category',
-          'pad_counts'               => false
-
-      );
-      $categories = get_categories( $args );
-      foreach ($categories as $category) : ?>
-        <?php if($category->parent == '9'): ?>
+      // Récupérer la taxonomie dans une variable
+      $taxonomy = 'sous-services';
+      // Variable avec le get_terms
+      $tax_terms = get_terms($taxonomy, array('hide_empty' => false, 'orderby' => 'id'));
+      ?>
+      <?php foreach ($tax_terms as $tax_term) : ?>
           <div class="sevice-prevention service">
             <div class="service_service">
-              <a href="<?php bloginfo('wpurl'); ?>/category/services/<?php echo $category->slug; ?>"><img src="<?php bloginfo('template_directory'); ?>/img/formation.png" alt="logo du service formation"></a>
+              <?php $test = get_field('taxonomy_image', $tax_term); ?>
+              <a href="<?= esc_attr(get_term_link($tax_term, $taxonomy)); ?>"><img src="<?= $test['url']; ?>" alt="<?= $test['alt']; ?>"/></a>
               <div class="service-info">
-                <h3><?php echo $category->name ?></h3>
                 <div class="service-paragraphe">
                   <p>
-                    <?php echo $category->description; ?>
+                    <?= wpautop( $tax_term->description ); ?>
                   </p>
                 </div>
                 <p>
-                  <a class="see-more" href="<?php bloginfo('wpurl'); ?>/category/services/<?php echo $category->slug; ?>">En savoir plus</a>
+                  <a class="see-more" href="<?= esc_attr(get_term_link($tax_term, $taxonomy)); ?>" title="<?= sprintf( __( "Voir le contenu de ce service" ), $tax_term->name ); ?>">En savoir plus</a>
                 </p>
               </div>
             </div>
           </div>
-        <?php endif; ?>
       <?php endforeach; ?>
     </div>
   </div>
