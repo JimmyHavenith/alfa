@@ -75,7 +75,7 @@
                 </li>
               <?php endwhile; endif; ?>
         </ul>
-        <a href="<?php bloginfo('wpurl'); ?>/category/services/category/news">Afficher toutes les news</a>
+        <a href="<?php bloginfo('wpurl'); ?>/category/news">Afficher toutes les news</a>
       </div>
     </div>
   </div>
