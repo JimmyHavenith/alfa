@@ -19,7 +19,7 @@
       <h2>Nos services</h2>
       <?php
       // Récupérer la taxonomie dans une variable
-      $taxonomy = 'sous-services';
+      $taxonomy = 'sous_services';
       // Variable avec le get_terms
       $tax_terms = get_terms($taxonomy, array('hide_empty' => false, 'orderby' => 'id'));
       ?>
