@@ -8,7 +8,15 @@
 			<?php if( !empty( get_the_title() ) ) : ?>
 				<h3><?php the_title(); ?></h3>
 			<?php endif; ?>
-			<?= get_field('service_contenu'); ?>
+      <p>
+        <?= get_field('job'); ?>
+      </p>
+      <p>
+        <?= get_field('email'); ?>
+      </p>
+      <p>
+        <?= get_field('telephone'); ?>
+      </p>
 		</div>
 	<?php endwhile; else: ?>
 		<p>Il n’y a pas d’articles</p>

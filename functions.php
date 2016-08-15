@@ -172,14 +172,33 @@ function create_post_type() {
       array(
           'labels' => array(
               'name' => __( 'services' ),
-              'singular_name' => __( 'service' ),
-              'add_new' => __('Nouveau service'),
-              'add_new_item' => __('Ajouter un nouveau service'),
+              'singular_name' => __( 'article' ),
+              'add_new' => __('Ajouter un article'),
+              'add_new_item' => __('Ajouter un nouvel article'),
               'menu_name' => __('Services'),
-              'all_items' => __('Tous les services'),
+              'all_items' => __('Tous les articles'),
               'name_admin_bar' => __('Services'),
-              'view_item' => __('Voir le service'),
-              'edit_item' => __('Modifier le service')
+              'view_item' => __('Voir l\'article'),
+              'edit_item' => __('Modifier l\'article')
+          ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => ['title'],
+      'menu_position' => 4
+    )
+  );
+  register_post_type( 'equipes',
+      array(
+          'labels' => array(
+              'name' => __( 'equipes' ),
+              'singular_name' => __( 'equipe' ),
+              'add_new' => __('Ajouter un membre'),
+              'add_new_item' => __('Ajouter un nouveau membre'),
+              'menu_name' => __('Equipes'),
+              'all_items' => __('Tous les membres'),
+              'name_admin_bar' => __('Equipes'),
+              'view_item' => __('Voir le membre'),
+              'edit_item' => __('Modifier le membre')
           ),
       'public' => true,
       'has_archive' => true,
@@ -192,6 +211,28 @@ function create_taxonomy() {
   register_taxonomy(
     'sous_services', /* Voici donc la taxonomie */
     'services', /* nom du custom post type */
+    array(
+        'hierarchical' => true,
+        'labels' => array(
+        'name' => __( 'Catégories', 'bakery' ),
+        'singular_name' => __( 'Catégories', 'nom du theme' ),
+        'search_items' =>  __( 'Rechercher une catégorie', 'nom du theme' ),
+        'all_items' => __( 'Toutes les catégories', 'nom du theme' ),
+        'parent_item' => __( 'Catégorie parente', 'nom du theme' ),
+        'parent_item_colon' => __( 'Catégorie parente :', 'nom du theme' ),
+        'edit_item' => __( 'Éditer une catégorie', 'nom du theme' ),
+        'update_item' => __( 'Sauvegarder une catégorie', 'nom du theme' ),
+        'add_new_item' => __( 'Ajouter une catégorie', 'nom du theme' ),
+        'new_item_name' => __( 'Nouvelle catégorie', 'nom du theme' )
+      ),
+      'show_admin_column' => true,
+      'show_ui' => true,
+      'query_var' => true
+    )
+  );
+  register_taxonomy(
+    'nos_equipes',
+    'equipes',
     array(
         'hierarchical' => true,
         'labels' => array(
