@@ -7,6 +7,24 @@ body{
 header, section, footer{
   width: 100%;
 }
+.header-alfa{
+  margin-top: 26px;
+  background-color: $color-blue;
+  .header-alfa-div {
+    display: block;
+    margin: auto;
+    width: 17%;
+    padding: 15px 0px;
+    h1 {
+      color: white;
+      float: right;
+      font-size: 19px;
+      font-weight: bold;
+      margin-top: 15px;
+      text-transform: uppercase;
+    }
+  }
+}
 .container{
   width: 90%;
   display: block;
@@ -33,20 +51,23 @@ header, section, footer{
       text-align: center;
     }
     a{
-      background-color: $color-blue;
       border-radius: 3px;
-      color: white;
+      color: #3689b3;
+      display: block;
       font-size: 17px;
+      margin-top: 15px;
       padding: 5px 8px;
+      text-align: center;
       text-decoration: none;
       transition: 0.3s;
     }
     a:hover{
-      background-color: $color-blue-hover;
+      text-decoration: underline;
     }
   }
 }
 .services-alfa{
+  background-color: white;
   display: block;
   width: 100%;
   padding: 35px 0;

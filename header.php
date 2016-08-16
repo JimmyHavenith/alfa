@@ -31,22 +31,4 @@
           </div>
         </div>
       </div>
-      <div class="header-alfa">
-        <div class="container">
-          <div class="header-alfa-div">
-            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="logo du centre alfa"></a>
-            <h1>Le centre ALFA</h1>
-          </div>
-        </div>
-      </div>
-      <?php if(is_home()): ?>
-        <div class="header-banner">
-          <img src="<?php bloginfo('template_directory'); ?>/img/banner02.png" alt="Photo de page d'accueil du centre alfa">
-          <div class="header-banner-txt">
-            <p>
-              Aide Liégoise aux Alcooliques et à leur Famille - 04 223 09 03
-            </p>
-          </div>
-        </div>
-      <?php endif; ?>
     </header>

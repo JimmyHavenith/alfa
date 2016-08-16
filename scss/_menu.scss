@@ -4,9 +4,9 @@ header{
     background-color: $color-black;
     display: block;
     padding: 15px 0px;
-    position: static;;
+    position: fixed;
     width: 100%;
-    top: 0;
+    top: 32px;
     z-index: 5;
     .main-menu{
       display: inline-block;
@@ -43,24 +43,6 @@ header{
           background-color: $color-blue;
           text-transform: uppercase;
         }
-      }
-    }
-  }
-  .header-alfa{
-    margin-top: 58px;
-    background-color: $color-blue;
-    .header-alfa-div {
-      display: block;
-      margin: auto;
-      width: 17%;
-      padding: 15px 0px;
-      h1 {
-        color: white;
-        float: right;
-        font-size: 19px;
-        font-weight: bold;
-        margin-top: 15px;
-        text-transform: uppercase;
       }
     }
   }

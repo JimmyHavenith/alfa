@@ -60,9 +60,9 @@ header .header-menu {
   background-color: #212121;
   display: block;
   padding: 15px 0px;
-  position: static;
+  position: fixed;
   width: 100%;
-  top: 0;
+  top: 32px;
   z-index: 5;
 }
 
@@ -109,27 +109,6 @@ header .header-menu .search-bar form input[type="submit"] {
   text-transform: uppercase;
 }
 
-header .header-alfa {
-  margin-top: 58px;
-  background-color: #3689b3;
-}
-
-header .header-alfa .header-alfa-div {
-  display: block;
-  margin: auto;
-  width: 17%;
-  padding: 15px 0px;
-}
-
-header .header-alfa .header-alfa-div h1 {
-  color: white;
-  float: right;
-  font-size: 19px;
-  font-weight: bold;
-  margin-top: 15px;
-  text-transform: uppercase;
-}
-
 header .header-banner {
   position: relative;
 }
@@ -155,6 +134,27 @@ body {
 
 header, section, footer {
   width: 100%;
+}
+
+.header-alfa {
+  margin-top: 26px;
+  background-color: #3689b3;
+}
+
+.header-alfa .header-alfa-div {
+  display: block;
+  margin: auto;
+  width: 17%;
+  padding: 15px 0px;
+}
+
+.header-alfa .header-alfa-div h1 {
+  color: white;
+  float: right;
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 15px;
+  text-transform: uppercase;
 }
 
 .container {
@@ -190,20 +190,23 @@ header, section, footer {
 }
 
 .about-alfa .about-alfa-div a {
-  background-color: #3689b3;
   border-radius: 3px;
-  color: white;
+  color: #3689b3;
+  display: block;
   font-size: 17px;
+  margin-top: 15px;
   padding: 5px 8px;
+  text-align: center;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .about-alfa .about-alfa-div a:hover {
-  background-color: #2a7796;
+  text-decoration: underline;
 }
 
 .services-alfa {
+  background-color: white;
   display: block;
   width: 100%;
   padding: 35px 0;
@@ -381,4 +384,214 @@ footer .footer-partenaires .footer-partenaires-div {
   display: block;
   margin: auto;
   width: 34%;
+}
+
+.header-alfa-content {
+  margin-top: 55px;
+  background-color: #3689b3;
+}
+
+.header-alfa-content .header-alfa-content-div {
+  height: 75px;
+}
+
+.header-alfa-content .header-alfa-content-div h2 {
+  color: white;
+  padding-top: 30px;
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header-banner {
+  position: relative;
+  height: 305px;
+}
+
+.header-banner .header-banner-image img {
+  left: 50%;
+  min-width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  transform: translateX(-50%);
+  transition: height 0.3s ease 0s;
+  z-index: -2;
+  height: auto;
+}
+
+.header-banner .header-banner-map iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.container-page {
+  background-color: white;
+  width: 100%;
+}
+
+.container-page .container-div {
+  width: 70%;
+  display: block;
+  margin: auto;
+  color: #212121;
+  font-size: 18px;
+  padding: 20px 0;
+  line-height: 1.2;
+}
+
+.container-page .container-div p {
+  margin: 18px 0;
+}
+
+.container-page .container-div strong {
+  font-weight: bold;
+}
+
+.container-page .container-div ul li {
+  margin-top: 15px;
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.container-page .container-div h3 {
+  color: #3689b3;
+  font-size: 23px;
+}
+
+.container-page .container-div .lien-telecharger h3 {
+  margin: 0;
+}
+
+.container-page .container-div .lien-telecharger li {
+  list-style-type: none;
+  margin: 50px 0;
+  padding: 15px 15px 5px;
+  background-color: whitesmoke;
+}
+
+.container-page .container-div .lien-telecharger li a {
+  color: #3689b3;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
+.container-page .container-div .lien-telecharger li a:hover {
+  background-color: #ededed;
+  text-decoration: underline;
+}
+
+.container-page .container-div .lien-telecharger .label-strong {
+  font-weight: bold;
+}
+
+.container-page .container-div .page-liens a {
+  background-color: #3689b3;
+  border-radius: 2px;
+  color: white;
+  display: block;
+  margin: auto;
+  padding: 25px 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 35%;
+  transition: 0.3s;
+}
+
+.container-page .container-div .page-liens a:hover {
+  background-color: #2a7796;
+}
+
+.container-page .container-div .page-liens .lien-first {
+  margin-bottom: 20px;
+}
+
+.container-page .container-div .container-equipe {
+  background-color: whitesmoke;
+  width: 60%;
+  display: block;
+  margin: auto;
+  padding: 15px;
+  margin-bottom: 50px;
+  border-radius: 2px;
+}
+
+.container-page .container-div .container-equipe h3 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.container-page .container-div .container-equipe p {
+  text-align: center;
+}
+
+.container-page .container-div .container-equipe .container-equipe-contact {
+  padding-top: 20px;
+}
+
+.container-page .container-div .container-equipe .container-equipe-contact .equipe-info {
+  color: #3689b3;
+}
+
+.container-page .container-div .container-equipe .container-equipe-contact, .container-page .container-div .container-equipe .container-equipe-photo {
+  display: inline-block;
+  width: 49%;
+  vertical-align: middle;
+}
+
+.container-page .container-div .contact .contact-menu {
+  margin-bottom: 75px;
+}
+
+.container-page .container-div .contact .contact-menu ul {
+  background-color: whitesmoke;
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+.container-page .container-div .contact .contact-menu ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container-page .container-div .contact .contact-menu ul li a {
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  color: #3689b3;
+  display: block;
+  float: left;
+  outline: medium none;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  width: 50%;
+}
+
+.container-page .container-div .contact .contact-menu::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.container-page .container-div .contact .contact-infos, .container-page .container-div .contact .contact-photo {
+  display: inline-block;
+  width: 49%;
+}
+
+.container-page .container-div .contact .contact-infos {
+  vertical-align: top;
+}
+
+.container-page .container-div .contact .contact-infos span {
+  font-weight: bold;
+}
+
+.container-page .container-div .contact .contact-photo img {
+  width: 100%;
 }

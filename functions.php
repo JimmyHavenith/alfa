@@ -206,6 +206,24 @@ function create_post_type() {
       'menu_position' => 4
     )
   );
+  register_post_type( 'banniere',
+      array(
+          'labels' => array(
+              'name' => __( 'bannière' ),
+              'singular_name' => __( 'bannière' ),
+              'menu_name' => __('Bannière'),
+              'all_items' => __('Voir la bannière'),
+              'name_admin_bar' => __('Bannière'),
+              'view_item' => __('Voir la bannière'),
+              'edit_item' => __('Modifier la bannière')
+          ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => ['title'],
+      'menu_position' => 4,
+      'excerpt' => 'add_new_item'
+    )
+  );
 }
 function create_taxonomy() {
   register_taxonomy(
@@ -253,6 +271,7 @@ function create_taxonomy() {
     )
   );
 }
+
 
 add_action( 'init', 'create_post_type' );
 add_action( 'init', 'create_taxonomy' );

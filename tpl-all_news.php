@@ -1,4 +1,4 @@
-<?php /* Template Name: Page "Self-help" */ ?>
+<?php /* Template Name: Page "Toutes les News" */ ?>
 
 <?php get_header(); ?>
 
@@ -21,18 +21,12 @@
 	  <section class="container-page">
 	    <div class="container-div">
 				<ul class="lien-telecharger">
-					<?php $query = new WP_query( array( 'post_type' => 'self-help', 'order' => 'ASC' ) );
+					<?php $query = new WP_query( array( 'post_type' => 'news', 'order' => 'ASC' ) );
 		        while ( $query -> have_posts() ): $query -> the_post(); global $post; ?>
 						<li>
 							<h3 class="title-list"><?php the_title(); ?></h3>
 		          <p>
-		            <span class="label-strong">Horaire : </span><?= get_field('help_horaire'); ?>
-		          </p>
-		          <p>
-		            <span class="label-strong">contact :</span>
-		          </p>
-		          <p>
-		            <?= get_field('help_contact'); ?>
+		            <?= get_field('news_content'); ?>
 		          </p>
 						</li>
 		    	  <?php endwhile; ?>

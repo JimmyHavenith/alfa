@@ -1,4 +1,4 @@
-<?php /* Template Name: Page "Nos équipes" */ ?>
+<?php /* Template Name: Page "FAQs" */ ?>
 
 <?php get_header(); ?>
 
@@ -20,17 +20,17 @@
   </section>
   <section class="container-page">
     <div class="container-div">
-      <div class="page-liens">
-				<?php
-				 $taxonomy = 'nos_equipes';
-				 $tax_terms = get_terms($taxonomy, array('hide_empty' => false, 'orderby' => 'id',));
-				 ?>
-						<?php
-						 foreach ($tax_terms as $tax_term) {
-						 echo '<a class="lien-first" href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' .   sprintf( __( "Voir tous les membres de l'équipe $tax_term->name " )) . '" ' . '>' . $tax_term->name.'</a>';
-						}
-						?>
-      </div>
+			<ul class="lien-telecharger">
+			<?php $query = new WP_query( array( 'post_type' => 'faqs', 'order' => 'ASC' ) );
+				while ( $query -> have_posts() ): $query -> the_post(); global $post; ?>
+				<li>
+          <h3>" <?php the_title(); ?> "</h3>
+          <p>
+            <?= get_field('faq_reponse') ?>
+          </p>
+				</li>
+			<?php endwhile; ?>
+			</ul>
     </div>
   </section>
 <?php endwhile; endif; ?>
