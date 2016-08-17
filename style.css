@@ -595,3 +595,16 @@ footer .footer-partenaires .footer-partenaires-div {
 .container-page .container-div .contact .contact-photo img {
   width: 100%;
 }
+
+.container-page .container-div .search-content {
+  margin-bottom: 50px;
+}
+
+.container-page .container-div .search-content a {
+  color: #2a7796;
+  text-decoration: none;
+}
+
+.container-page .container-div .search-content a:hover {
+  text-decoration: underline;
+}

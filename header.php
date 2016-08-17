@@ -23,10 +23,7 @@
           </nav>
           <div class="search-bar">
             <div class="search-bar-div">
-              <form class="search" action="index.html" method="post">
-                <input type="text" name="name" value="">
-                <input type="submit" name="name" value="Rechercher">
-              </form>
+              <?php get_search_form(true); ?>
             </div>
           </div>
         </div>

@@ -187,5 +187,15 @@
         }
       }
     }
+    .search-content{
+      margin-bottom: 50px;
+      a{
+        color: $color-blue-hover;
+        text-decoration: none;
+      }
+      a:hover{
+        text-decoration: underline;
+      }
+    }
   }
 }
