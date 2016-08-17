@@ -1,0 +1,122 @@
+@media screen and (max-width: 1280px) {
+  /* Home page*/
+  .header-banner {
+    height: 250px;
+    position: relative;
+  }
+  .about-alfa .about-alfa-div {
+    width: 60%;
+  }
+  .news-alfa .news {
+    width: 60%;
+  }
+  .news-alfa .news a {
+    width: 30%;
+  }
+  footer .footer-partenaires .footer-partenaires-div {
+    width: 50%;
+  }
+
+  // Contenu page courante
+  .container-page .container-div {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  /* Home page */
+  .header-banner {
+    height: 250px;
+    position: relative;
+  }
+  .about-alfa .about-alfa-div {
+    width: 70%;
+  }
+  .news-alfa .news {
+    width: 70%;
+  }
+  .news-alfa .news a {
+    width: 30%;
+  }
+  footer .footer-partenaires .footer-partenaires-div {
+    width: 65%;
+  }
+
+  // Page équipe
+  .container-page .container-div .page-liens a {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
+  /* Home page */
+  .header-banner {
+    height: 250px;
+    position: relative;
+  }
+  .about-alfa .about-alfa-div {
+    width: 100%;
+  }
+  .services-alfa .service {
+    display: block;
+    width: 100%;
+  }
+  .news-alfa .news {
+    width: 100%;
+  }
+  .news-alfa .news a {
+    width: 40%;
+  }
+  footer .footer-partenaires .footer-partenaires-div {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 680px) {
+  /* Home page */
+  .services-alfa .service .service_service .service-paragraphe p{
+    text-align: left;
+  }
+  footer .footer-logo, footer .footer-sous-menu, footer .footer-partenaires {
+      width: 32%;
+  }
+  footer .footer-partenaires .footer-partenaires-div {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* Home page */
+  footer .footer-logo{
+    display: none;
+  }
+  footer .footer-sous-menu, footer .footer-partenaires {
+      width: 49%;
+  }
+  footer .footer-partenaires .footer-partenaires-div {
+    width: 100%;
+  }
+
+  // Page équipe
+  .container-page .container-div .page-liens a {
+    width: 100%;
+  }
+
+  //Page contact
+  .container-page .container-div .contact .contact-infos, .container-page .container-div .contact .contact-photo {
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 360px) {
+  /* Home page */
+  footer .footer-sous-menu, footer .footer-partenaires {
+      width: 100%;
+  }
+  footer .footer-partenaires .footer-partenaires-div{
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+  footer .footer-sous-menu ul{
+    display: block;
+    margin: auto auto 30px;
+    width: 34%;
+  }
+}
