@@ -16,9 +16,73 @@ header{
         li{
           float: left;
           margin-right: 18px;
+          position: relative;
           a{
             color: white;
             text-decoration: none;
+            z-index: 1;
+            position: relative;
+            padding-bottom: 3px;
+          }
+          a:hover{
+            color: $color-blue;
+          }
+          a:before{
+            content: '';
+            position: absolute;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: $color-blue;
+            width: 100%;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.15s ease-in-out 0s;
+          }
+          a:hover:before{
+            visibility: visible;
+            transform: scaleX(1);
+          }
+          a:focus ul{
+            background-color: #212121;
+            display: block;
+            left: -115px;
+            top: 22px;
+            width: 250%;
+            height: 123px;
+            text-align: left;
+            a{
+              box-sizing: border-box;
+              padding: 5px 0px;
+              width: 100%;
+            }
+          }
+          ul{
+            display: none;
+            list-style: outside none none;
+            margin-left: 105px;
+            margin-top: -10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            position: absolute;
+            li{
+              margin-top: 12px;
+              margin-left: 10px;
+              width: 100%;
+            }
+          }
+        }
+        li:hover ul{
+          background-color: #212121;
+          display: block;
+          left: -115px;
+          top: 22px;
+          width: 320%;
+          text-align: left;
+          a{
+            box-sizing: border-box;
+            padding: 5px 0px;
+            width: 100%;
           }
         }
       }
