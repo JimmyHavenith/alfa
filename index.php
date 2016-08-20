@@ -58,7 +58,7 @@
           <div class="sevice-prevention service">
             <div class="service_service">
               <?php $logo = get_field('taxonomy_image', $tax_term); ?>
-              <a href="<?= esc_attr(get_term_link($tax_term, $taxonomy)); ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>"/></a>
+              <a title="voir le contenu du <?= $tax_term->name; ?>" href="<?= esc_attr(get_term_link($tax_term, $taxonomy)); ?>"><img src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>"/></a>
               <div class="service-info">
                 <h3><?= $tax_term->name ; ?></h3>
                 <div class="service-paragraphe">
