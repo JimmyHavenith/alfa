@@ -1,5 +1,8 @@
 header{
   display: block;
+  .header-logo, .header-hb{
+    display: none;
+  }
   .header-menu{
     background-color: $color-black;
     display: block;
@@ -9,8 +12,8 @@ header{
     top: 32px;
     z-index: 5;
     .main-menu{
-      display: inline-block;
-      width: 60%;
+      float: left;
+      margin-top: 6px;
       padding-bottom: 6px;
       ul{
         li{
@@ -88,13 +91,15 @@ header{
       }
     }
     .search-bar{
-      display: inline-block;
-      width: 39%;
+      float: right;
       .search-bar-div{
         width: 100%;
       }
       form{
         float: right;
+        .screen-reader-text {
+            display: none;
+        }
         input[type="text"]{
           border: medium none;
           padding: 5px;

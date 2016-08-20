@@ -27,6 +27,16 @@
               <?php get_search_form(true); ?>
             </div>
           </div>
+          <div class="header-logo">
+            <a class="header-logo-img" href="#"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="logo du centre alfa"></a>
+            <a class="header-logo-menu" href="#"><img src="<?php bloginfo('template_directory'); ?>/img/icon-menu.png" alt="icône pour accéder au menu"></a>
+          </div>
         </div>
       </div>
+      <div class="header-hb">
+        <nav class="header-hb-nav">
+          <?php wp_nav_menu(array(
+            'theme_location:' => 'nav'
+          )); ?>
+        </nav>
     </header>

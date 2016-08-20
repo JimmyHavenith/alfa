@@ -1,9 +1,14 @@
+@media screen and (max-width: 1350px) {
+  /* Home page*/
+  .header-alfa{
+    .header-alfa-div{
+      width: 19%;
+    }
+  }
+}
 @media screen and (max-width: 1280px) {
   /* Home page*/
-  .header-banner {
-    height: 250px;
-    position: relative;
-  }
+
   .about-alfa .about-alfa-div {
     width: 60%;
   }
@@ -22,11 +27,25 @@
     width: 90%;
   }
 }
+@media screen and (max-width: 1208px) {
+  /* Home page*/
+  .header-alfa{
+    .header-alfa-div{
+      width: 22%;
+    }
+  }
+
+  // Contenu page courante
+  .container-page .container-div {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 1050px) {
   /* Home page */
-  .header-banner {
-    height: 250px;
-    position: relative;
+  .header-alfa{
+    .header-alfa-div{
+      width: 25%;
+    }
   }
   .about-alfa .about-alfa-div {
     width: 70%;
@@ -46,12 +65,94 @@
     width: 60%;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1040px) {
   /* Home page */
-  .header-banner {
-    height: 250px;
+  .container{
+    width: 100%;
+  }
+  .container-div{
+    width: 100%;
+  }
+  .header-menu{
+    height: 25px;
     position: relative;
   }
+  .header-logo{
+    display: block !important;
+    .header-logo-menu{
+      position: absolute;
+      top: 7px;
+      right: 25px;
+    }
+    .header-logo-img{
+      position: absolute;
+      top: 7px;
+      left: 25px;
+    }
+  }
+  .header-alfa{
+    height: 75px;
+    .header-alfa-div{
+      width: 100%;
+      a{
+        display: none;
+      }
+      h1{
+        float: none;
+        text-align: center;
+      }
+    }
+  }
+  .main-menu, .search-bar{
+    display: none;
+  }
+  header .header-hb{
+    display: block;
+  }
+  .header-hb-nav{
+    background-color: $color-black;
+    bottom: 0;
+    display: block;
+    left: 100%;
+    margin-top: 55px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 50px;
+    ul.menu{
+      font-size: 1em;
+      left: 0;
+      position: static;
+      width: 100%;
+      li{
+        a{
+          color: white;
+          display: block;
+          padding: 1em;
+          text-decoration: none;
+        }
+        a:hover{
+          background-color: #303030;
+        }
+        .sub-menu li a{
+          padding-left: 35px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 930px) {
+  /* Home page */
+  .header-alfa{
+    .header-alfa-div{
+      width: 30%;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  /* Home page */
   .about-alfa .about-alfa-div {
     width: 100%;
   }
@@ -69,8 +170,21 @@
     width: 80%;
   }
 }
+@media screen and (max-width: 768px) {
+  /* Home page */
+  .header-alfa{
+    .header-alfa-div{
+      width: 35%;
+    }
+  }
+}
 @media screen and (max-width: 680px) {
   /* Home page */
+  .header-alfa{
+    .header-alfa-div{
+      width: 38%;
+    }
+  }
   .services-alfa .service .service_service .service-paragraphe p{
     text-align: left;
   }
@@ -83,6 +197,11 @@
 }
 @media screen and (max-width: 600px) {
   /* Home page */
+  .header-alfa{
+    .header-alfa-div{
+      width: 50%;
+    }
+  }
   footer .footer-logo{
     display: none;
   }
@@ -98,14 +217,32 @@
     width: 100%;
   }
 
+  // bannières sur toutes les page-liens
+  .header-banner{
+      display: none;
+  }
+
   //Page contact
   .container-page .container-div .contact .contact-infos, .container-page .container-div .contact .contact-photo {
     display: block;
     width: 100%;
   }
 }
+@media screen and (max-width: 460px) {
+  /* Home page */
+  .header-alfa{
+    .header-alfa-div{
+      width: 65%;
+    }
+  }
+}
 @media screen and (max-width: 360px) {
   /* Home page */
+  .header-alfa{
+    .header-alfa-div{
+      width: 75%;
+    }
+  }
   footer .footer-sous-menu, footer .footer-partenaires {
       width: 100%;
   }
