@@ -10,6 +10,7 @@
         e.preventDefault();
         $('.header-hb-nav').css('left', '100%');
         $('section').css('display', 'block');
+        $('.header-banner').css('display', 'none');
       } else {
         e.preventDefault();
         $('.header-hb-nav').css('left', '0');
