@@ -62,9 +62,7 @@
               <div class="service-info">
                 <h3><?= $tax_term->name ; ?></h3>
                 <div class="service-paragraphe">
-                  <p>
-                    <?= wpautop( $tax_term->description ); ?>
-                  </p>
+                  <?= wpautop( $tax_term->description ); ?>
                 </div>
                 <p>
                   <a class="see-more" href="<?= esc_attr(get_term_link($tax_term, $taxonomy)); ?>" title="voir le contenu du <?= $tax_term->name; ?>">En savoir plus</a>
@@ -88,9 +86,7 @@
                 <li>
                   <h3><?php echo get_the_title(); ?> <span>(<?php echo get_the_date(); ?>)</span></h3>
                   <img class="streamer" src="<?php bloginfo('template_directory'); ?>/img/streamer.png" alt="banderole pour news">
-                  <p>
                     <?php echo get_field('news_content'); ?>
-                  </p>
                 </li>
               <?php endwhile; endif; ?>
         </ul>

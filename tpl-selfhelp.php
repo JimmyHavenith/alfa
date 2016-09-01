@@ -31,9 +31,7 @@
 		          <p>
 		            <span class="label-strong">contact :</span>
 		          </p>
-		          <p>
 		            <?= get_field('help_contact'); ?>
-		          </p>
 						</li>
 		    	  <?php endwhile; ?>
 				</ul>

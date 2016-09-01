@@ -25,9 +25,7 @@
 		        while ( $query -> have_posts() ): $query -> the_post(); global $post; ?>
 						<li>
 							<h3 class="title-list"><?php the_title(); ?></h3>
-		          <p>
 		            <?= get_field('news_content'); ?>
-		          </p>
 						</li>
 		    	  <?php endwhile; ?>
 				</ul>
