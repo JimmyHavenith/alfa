@@ -20,41 +20,41 @@
   <section class="container-page">
     <div class="container-div">
       <ul class="plan-du-site">
-        <li><a href="#">Accueil</a></li>
+        <li><a href="<?php bloginfo('wpurl'); ?>">Accueil</a></li>
         <li>
-          <a href="#">A propos</a>
+          <a href="<?php bloginfo('wpurl'); ?>/a-propos">A propos</a>
           <ul>
-            <li><a href="#">Nous soutenir</a></li>
-            <li><a href="#">Nos équipes</a></li>
+            <li><a href="<?php bloginfo('wpurl'); ?>/nous-soutenir">Nous soutenir</a></li>
+            <li><a href="<?php bloginfo('wpurl'); ?>/nos-equipes">Nos équipes</a></li>
           </ul>
         </li>
         <li>
           <a href="#">Nos services</a>
           <ul>
-            <li><a href="#">Service de prévention</a></li>
-            <li><a href="#">Service thérapeutique</a></li>
-            <li><a href="#">Service de parentalité</a></li>
-            <li><a href="#">Service réduction des risques</a></li>
+            <li><a href="<?php bloginfo('wpurl'); ?>/sous_services/service-prevention">Service de prévention</a></li>
+            <li><a href="<?php bloginfo('wpurl'); ?>/sous_services/service-therapeutique">Service thérapeutique</a></li>
+            <li><a href="<?php bloginfo('wpurl'); ?>/sous_services/service-parentalite">Service de parentalité</a></li>
+            <li><a href="<?php bloginfo('wpurl'); ?>sous_services/service-risques">Service réduction des risques</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">News</a>
+          <a href="<?php bloginfo('wpurl'); ?>/les-news">News</a>
           <ul>
-            <li><a href="#">Toutes les news</a></li>
-            <li><a href="#">Stages &amp; jobs </a></li>
+            <li><a href="<?php bloginfo('wpurl'); ?>/les-news">Toutes les news</a></li>
+            <li><a href="<?php bloginfo('wpurl'); ?>/les-news/stages-jobs">Stages &amp; jobs </a></li>
           </ul>
         </li>
-        <li><a href="#">Tarifs</a></li>
+        <li><a href="<?php bloginfo('wpurl'); ?>/nos-tarifs">Tarifs</a></li>
         <li>
-          <a href="#">Partenariats</a>
+          <a href="<?php bloginfo('wpurl'); ?>/partenariats">Partenariats</a>
           <ul>
-            <li><a href="#">partenariats et réseaux</a></li>
-            <li><a href="#">Self-help</a></li>
+            <li><a href="<?php bloginfo('wpurl'); ?>/partenariats/partenariats-reseaux">partenariats et réseaux</a></li>
+            <li><a href="<?php bloginfo('wpurl'); ?>/partenariats/self-help">Self-help</a></li>
           </ul>
         </li>
-        <li><a href="#">Documents</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="<?php bloginfo('wpurl'); ?>/documents-a-telecharger">Documents</a></li>
+        <li><a href="<?php bloginfo('wpurl'); ?>/foire-aux-questions">FAQs</a></li>
+        <li><a href="<?php bloginfo('wpurl'); ?>/nous-contacter">Contact</a></li>
       </ul>
     </div>
   </section>

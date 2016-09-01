@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
   	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,700italic,900italic' rel='stylesheet' type='text/css'>
+    <!-- HTML5 element support for IE6-8 -->
+    <!--[if lt IE 9]>
+     <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+     </script>
+    <![endif]-->
     <?php
       wp_head();
     ?>

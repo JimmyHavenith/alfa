@@ -25,12 +25,6 @@
 			<?php $query = new WP_query( array( 'post_type' => 'contact', 'order' => 'ASC' ) );
 	  		while ( $query -> have_posts() ): $query -> the_post(); global $post; ?>
 				<div class="contact">
-					<div class="contact-menu">
-						<ul>
-							<li><a href="#"><?php the_title(); ?></a></li>
-							<li><a href="#">Réduction des risques</a></li>
-						</ul>
-					</div>
 					<div class="contact-infos">
 						<p>
 							<?= get_field('contact_adresse'); ?>
