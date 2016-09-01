@@ -1,11 +1,23 @@
 <?php
-require TEMPLATEPATH.'/WPHP-framework/theme.php';
+require TEMPLATEPATH.'/WPHP-Framework/theme.php';
 $theme = new Theme(array(
   'menus' => array(
     'nav' => 'Navigation'
   )
 ));
 
+// Remove menus
+function wptutsplus_remove_comments_menu_item() {
+    remove_menu_page( 'edit-comments.php' );
+    remove_menu_page( 'plugins.php' );
+    remove_menu_page( 'users.php' );
+    remove_menu_page( 'themes.php' );
+    remove_menu_page( 'index.php' );
+    remove_menu_page( 'upload.php' );
+    remove_menu_page( 'tools.php' );
+    remove_menu_page( 'options-general.php' );
+}
+add_action( 'admin_menu', 'wptutsplus_remove_comments_menu_item' );
 
 if ( !function_exists('sf_get_current_url') ):
  	function sf_get_current_url( $mode = 'base' ) {
